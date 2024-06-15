@@ -9,6 +9,7 @@ const loginRouter = require("./routes/loginRouter");
 app.set('port', process.env.PORT || 1903);
 app.use(cors());
 app.use(express.json());
+app.use('/uploads', express.static(__dirname + '\\public'));
 
 app.use('/api', [
   userRouter,
